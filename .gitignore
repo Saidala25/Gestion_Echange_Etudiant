@@ -42,4 +42,4 @@ build/
 *.log
 
 ### Config locale (mot de passe) ###
-src/main/resources/db.local.properties.example
+src/main/resources/db.local.properties
