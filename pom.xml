@@ -10,6 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
+    
         <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate.version>6.6.59.Final</hibernate.version>
