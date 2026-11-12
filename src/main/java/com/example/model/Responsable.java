@@ -14,7 +14,7 @@ public class Responsable extends Utilisateur {
     @OneToMany(mappedBy = "responsable")
     private List<Offre> offresGerees;
 
-    @OneToMany(mappedBy = "responsable")
+    @OneToMany(mappedBy = "responsableValidateur")
     private List<Candidature> candidaturesTraitees;
 
     public Responsable() {
