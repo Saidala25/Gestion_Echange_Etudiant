@@ -41,5 +41,5 @@ build/
 *.class
 *.log
 
-   ### Config locale (mot de passe) ###
-   src/main/resources/db.local.properties
+### Config locale (mot de passe) ###
+src/main/resources/db.local.properties.example
