@@ -1,4 +1,9 @@
 package com.example.dao;
 
-public interface DocumentDao {
+import com.example.model.Document;
+import java.util.List;
+
+public interface DocumentDao extends GenericDao<Document> {
+
+    List<Document> findByCandidatureId(Long candidatureId);
 }

@@ -10,17 +10,14 @@ public class Etudiant extends Utilisateur {
     @OneToMany(mappedBy = "etudiant")
     private List<Candidature> candidatures;
 
-    // Constructeur vide
     public Etudiant() {
         super();
     }
 
-    // Constructeur avec paramètres
     public Etudiant(String nom, String email, String motDePasse) {
         super(nom, email, motDePasse);
     }
 
-    // Getter et Setter
 
     public List<Candidature> getCandidatures() {
         return candidatures;

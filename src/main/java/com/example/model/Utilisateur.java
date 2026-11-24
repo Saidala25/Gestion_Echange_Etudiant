@@ -22,6 +22,10 @@ public abstract class Utilisateur {
     @Column(nullable = false)
     private String motDePasse;
 
+    // Compte actif ou désactivé par l'administrateur
+    @Column(nullable = false, columnDefinition = "boolean default true")
+    private boolean actif = true;
+
     // Constructeur vide obligatoire pour Hibernate
     public Utilisateur() {
     }
@@ -65,5 +69,13 @@ public abstract class Utilisateur {
 
     public void setMotDePasse(String motDePasse) {
         this.motDePasse = motDePasse;
+    }
+
+    public boolean isActif() {
+        return actif;
+    }
+
+    public void setActif(boolean actif) {
+        this.actif = actif;
     }
 }

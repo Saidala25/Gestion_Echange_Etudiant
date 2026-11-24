@@ -2,6 +2,7 @@
 package com.example.model;
 
 import jakarta.persistence.*;
+import com.example.util.StatutConstants;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,13 @@ public class Offre {
     private String description;
 
     private LocalDate datePublication;
+
+    // Date limite pour postuler (facultative)
+    private LocalDate dateLimite;
+
+    // OUVERTE ou FERMEE (voir StatutConstants)
+    @Column(nullable = false, length = 20, columnDefinition = "varchar(20) default 'OUVERTE'")
+    private String statut = StatutConstants.OUVERTE;
 
     // Plusieurs offres peuvent être gérées par un responsable
     @ManyToOne
@@ -79,6 +87,22 @@ public class Offre {
 
     public void setDatePublication(LocalDate datePublication) {
         this.datePublication = datePublication;
+    }
+
+    public LocalDate getDateLimite() {
+        return dateLimite;
+    }
+
+    public void setDateLimite(LocalDate dateLimite) {
+        this.dateLimite = dateLimite;
+    }
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
     }
 
     public Responsable getResponsable() {
